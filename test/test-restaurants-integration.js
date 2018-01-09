@@ -4,6 +4,7 @@ const chai = require('chai');
 const chaiHttp = require('chai-http');
 const faker = require('faker');
 const mongoose = require('mongoose');
+const should = require('chai').should(); 
 
 // this makes the expect syntax available throughout
 // this module
@@ -132,7 +133,6 @@ describe('Restaurants API resource', function() {
           expect(res.body.restaurants).to.have.length.of(count);
         });
     });
-
 
     it('should return restaurants with right fields', function() {
       // Strategy: Get back all restaurants, and ensure they have expected keys
